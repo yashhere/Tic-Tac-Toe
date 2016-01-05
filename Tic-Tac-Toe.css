@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway|Allura|Roboto|Cabin:700|Rosario");
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/******************* CSS RESETS ENDS HERE ************************/
+
+/******************* MY CSS STARTS HERE **************************/
+
+body {
+	background-color: #0d0020;
+}
+
+.icons {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.fa {
+	padding-left: 20px;
+	margin-bottom: -15%;
+}
+
+.fa-twitter {
+	color: white;
+	font-size: 40px;
+	transition-property: all;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
+}
+
+.fa-twitter:hover {
+	color: #55acee;
+}
+
+.fa-facebook-official {
+	color: white;
+	font-size: 40px;
+	transition-property: all;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
+}
+
+.fa-facebook-official:hover {
+	color:#3b5998;
+}
+
+.fa-github {
+	color: white;
+	font-size: 40px;
+	transition-property: all;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
+}
+
+.fa-github:hover {
+	color:#999;
+}
+
+.fa-google-plus {
+	color: white;
+	font-size: 40px;
+	transition-property: all;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
+}
+
+.fa-google-plus:hover {
+	color:#dc4e41;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+	font-size: 70px;
+	margin-top: 2%;
+	font-family: Raleway;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	margin-bottom: -4%;
+}
+
+#container {
+	margin: 10% auto;
+	/*border: 1px solid green;*/
+	width: 50%;
+}
+
+#row {
+	width:350px;
+	margin: 0 auto;
+}
+#box {
+	float: left;
+	width: 100px;
+	height: 100px;
+	border: 2px solid red;
+}
+
+/* clearing the floats */
+
+.clear:before, .clear:after {
+    content: " ";
+    display: table;
+}
+
+.clear:after {
+    clear: both;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
