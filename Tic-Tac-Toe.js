@@ -1,14 +1,16 @@
-function checkWinner() {
-	var box1 = document.getElementById("#one").innerHTML,
-		box2 = document.getElementById("#two").innerHTML,
-		box3 = document.getElementById("#three").innerHTML,
-		box4 = document.getElementById("#four").innerHTML,
-		box5 = document.getElementById("#five").innerHTML,
-		box6 = document.getElementById("#six").innerHTML,
-		box7 = document.getElementById("#seven").innerHTML,
-		box8 = document.getElementById("#eight").innerHTML,
-		box9 = document.getElementById("#nine").innerHTML;
+var turn = 'X';
 
+var box1 = document.getElementById("#one").innerHTML,
+	box2 = document.getElementById("#two").innerHTML,
+	box3 = document.getElementById("#three").innerHTML,
+	box4 = document.getElementById("#four").innerHTML,
+	box5 = document.getElementById("#five").innerHTML,
+	box6 = document.getElementById("#six").innerHTML,
+	box7 = document.getElementById("#seven").innerHTML,
+	box8 = document.getElementById("#eight").innerHTML,
+	box9 = document.getElementById("#nine").innerHTML;
+
+function checkWinner() {
 	if(box1 === 'X' && box2 === 'X' && box3 === 'X')
 		alert("X wins");
 	else if(box4 ==='X' && box5 === 'X' && box6 === 'X')
@@ -45,3 +47,54 @@ function checkWinner() {
 		alert("Tie");
 }
 
+
+function putMark(point) {
+	current = document.getElementById(point).innerHTML;
+	if(current.length > 0)
+		return;
+	else if(turn === 'X') {
+		current = 'X';
+		turn = 'O';
+	}
+	else if(turn === 'O') {
+		current = 'O';
+		turn = 'X';
+	}
+	checkWinner();
+}
+
+box1.addEventListner('onclick', function() {
+	putMark("#one");
+});
+
+box2.addEventListner('onclick', function() {
+	putMark("#two");
+});
+
+box3.addEventListner('onclick', function() {
+	putMark("#three");
+});
+
+box4.addEventListner('onclick', function() {
+	putMark("#four");
+});
+
+box5.addEventListner('onclick', function() {
+	putMark("#five");
+});
+
+box6.addEventListner('onclick', function() {
+	putMark("#six");
+});
+
+box7.addEventListner('onclick', function() {
+	putMark("#seven");
+});
+
+box8.addEventListner('onclick', function() {
+	putMark("#eight");
+});
+
+box9.addEventListner('onclick', function() {
+	putMark("#nine");
+});
