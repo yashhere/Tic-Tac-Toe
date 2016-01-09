@@ -53,110 +53,27 @@ table {
 /******************* MY CSS STARTS HERE **************************/
 
 body {
-	background-color: #0d0020;
+	/*background-color: #0d0020;
+	color: white;*/
 }
 
-.icons {
-	margin-top: 20px;
-	text-align: center;
-}
-
-.fa {
-	padding-left: 20px;
-	margin-bottom: -15%;
-}
-
-.fa-twitter {
-	color: white;
-	font-size: 40px;
-	transition-property: all;
-	transition-duration: 0.3s;
-	transition-timing-function: linear;
-}
-
-.fa-twitter:hover {
-	color: #55acee;
-}
-
-.fa-facebook-official {
-	color: white;
-	font-size: 40px;
-	transition-property: all;
-	transition-duration: 0.3s;
-	transition-timing-function: linear;
-}
-
-.fa-facebook-official:hover {
-	color:#3b5998;
-}
-
-.fa-github {
-	color: white;
-	font-size: 40px;
-	transition-property: all;
-	transition-duration: 0.3s;
-	transition-timing-function: linear;
-}
-
-.fa-github:hover {
-	color:#999;
-}
-
-.fa-google-plus {
-	color: white;
-	font-size: 40px;
-	transition-property: all;
-	transition-duration: 0.3s;
-	transition-timing-function: linear;
-}
-
-.fa-google-plus:hover {
-	color:#dc4e41;
-}
-
-h1 {
-	color: white;
-	text-align: center;
-	font-size: 70px;
-	margin-top: 2%;
-	font-family: Raleway;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	margin-bottom: -4%;
-}
-
-#container {
-	margin: 10% auto;
-	/*border: 1px solid green;*/
-	width: 50%;
-}
-
-#row {
-	width:350px;
+.container {
+	width: 30%;
 	margin: 0 auto;
+	text-align: center;
 }
-#box {
-	float: left;
-	width: 100px;
+.square {
+	padding: 10px;
 	height: 100px;
-	border: 2px solid red;
+	width: 100px;
+	text-align: center;
+	font-size: 50px;
+	vertical-align: middle;
 }
 
-/* clearing the floats */
-
-.clear:before, .clear:after {
-    content: " ";
-    display: table;
+table {
+	margin-top: 10%;
 }
-
-.clear:after {
-    clear: both;
+table tr td{
+	border: 5px solid red;
 }
-
-.center {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-
-
