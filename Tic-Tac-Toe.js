@@ -1,3 +1,5 @@
+"use strict"
+
 var turn = "X",
 	winner = null;
 
@@ -6,42 +8,36 @@ if(Math.random() > 0.5) {
 }
 
 function startGame() {
-	setMessage(turn);
+	setMessage("It is " + turn + "'s turn");
 }
 
 function setMessage(msg) {
-	document.getElementById("message").innerText = "It's " + msg + "'s turn."; 
+	document.getElementById("message").innerText = msg; 
 }
 
-function message(msg) {
-	document.getElementById("message").innerText = msg;
-}
-
-window.onload = function() {
-	startGame();
-}
-
-function nextMove(box) {
-	if(winner != null) {
-		message(turn + " already won the game");
-	} else if (box.innerText == "") {
-		box.innerText = turn;
-		switchTurn();
-		setMessage(turn);
+function nextMove(square) {
+	if(winner !== null) {
+		setMessage(turn + " already won the game");
+	} else if (square.innerText == "") {
+		square.innerText = turn;
+		switchTurn();		
 	} else {
-		message("This Box is already used");
+		setMessage("Invalid Move");
 	}
 }
 
 function switchTurn() {
 	if(checkWinner(turn)) {
-		message("Congratulations " + turn);
+		setMessage("Congratulations " + turn +" , You win!!");
 		winner = turn;
-	}
-	if(turn === "X") {
+	}	else if(checkForTie()) {
+		setMessage("It is a tie");
+	}	else if(turn == "X") {
 		turn = "O";
+		setMessage("It is " + turn + "'s turn");
 	} else {
 		turn = "X";
+		setMessage("It is " + turn + "'s turn");
 	}
 }
 
@@ -54,7 +50,7 @@ function check(a, b, c, player) {
 }
 
 function getBox(number) {
-	return document.getElementById("\"" + number + "\"").innerText;
+	return document.getElementById("s" + number).innerText;
 }
 
 function checkWinner(player) {
@@ -71,40 +67,23 @@ function checkWinner(player) {
 	}
 	return result;
 }
-=======
-turn = "X";
 
-function startGame() {
-	setMessage(turn);
-	var nextMove = function() {
-			if(turn = "X") {
-			turn = "O";
-			setMessage(turn);
-			document.innerHTML = turn;
-		}
-
-		else {
-			turn = "X";
-			setMessage(turn);
-			document.innerHTML = turn;
-		}
+function checkForTie() {
+	var result = false;
+	if(getBox(1) !== "" &&
+	   getBox(2) !== "" &&
+	   getBox(3) !== "" &&
+	   getBox(4) !== "" &&
+	   getBox(5) !== "" &&
+	   getBox(6) !== "" &&
+	   getBox(7) !== "" &&
+	   getBox(8) !== "" &&
+	   getBox(9) !== "" && winner == null) {
+		result = true;
 	}
-
-	document.getElementById("1").onclick = nextMove;
-	document.getElementById("2").onclick = nextMove;
-	document.getElementById("3").onclick = nextMove;
-	document.getElementById("4").onclick = nextMove;
-	document.getElementById("5").onclick = nextMove;
-	document.getElementById("6").onclick = nextMove;
-	document.getElementById("7").onclick = nextMove;
-	document.getElementById("8").onclick = nextMove;
-	document.getElementById("9").onclick = nextMove;
+	return result;
 }
 
-function setMessage(msg) {
-	document.getElementById("message").innerText = "It's " + msg + "'s turn."; 
-}
-
-window.onload = function () {
+window.onload = function() {
 	startGame();
 }

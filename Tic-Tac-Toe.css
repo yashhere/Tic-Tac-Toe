@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway|Allura|Roboto|Cabin:700|Rosario");
+@import url("https://fonts.googleapis.com/css?family=Raleway|Allura|Roboto|Oxygen|Cabin:700|Rosario");
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -53,8 +53,70 @@ table {
 /******************* MY CSS STARTS HERE **************************/
 
 body {
-	/*background-color: #0d0020;
-	color: white;*/
+	background: #5C258D; /* fallback for old browsers */
+	background: url('hue.jpg') no-repeat;
+	-webkit-animation: linear 5s infinite;
+    -moz-animation: linear 5s infinite;
+    animation: linear 5s infinite;
+    -webkit-filter: hue-rotate(276deg) contrast(1.34294);
+}
+
+.icons {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.fa {
+	padding-left: 20px;
+	margin-bottom: -15%;
+}
+
+.fa-twitter {
+	color: white;
+	font-size: 40px;
+	transition-property: all;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
+}
+
+.fa-twitter:hover {
+	color: #55acee;
+}
+
+.fa-facebook-official {
+	color: white;
+	font-size: 40px;
+	transition-property: all;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
+}
+
+.fa-facebook-official:hover {
+	color:#3b5998;
+}
+
+.fa-github {
+	color: white;
+	font-size: 40px;
+	transition-property: all;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
+}
+
+.fa-github:hover {
+	color:#999;
+}
+
+.fa-google-plus {
+	color: white;
+	font-size: 40px;
+	transition-property: all;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
+}
+
+.fa-google-plus:hover {
+	color:#dc4e41;
 }
 
 .container {
@@ -63,17 +125,35 @@ body {
 	text-align: center;
 }
 .square {
-	padding: 10px;
+	padding: 7px;
 	height: 100px;
 	width: 100px;
 	text-align: center;
-	font-size: 50px;
+	font-size: 40px;
 	vertical-align: middle;
+	font-family: Arial;
 }
 
 table {
 	margin-top: 10%;
 }
-table tr td{
-	border: 5px solid red;
+
+tr td {
+	border: 10px solid white;
+}
+
+h1 {
+	
+	color: white;
+	font-size: 40px;
+	font-family: Raleway;
+	padding-top: 10%;
+}
+
+#message {
+	font-size: 30px;
+	padding-top: 5%;
+	width: auto;
+	color: white;
+	font-family: Oxygen;
 }
