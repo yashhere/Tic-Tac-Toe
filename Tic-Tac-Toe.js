@@ -28,7 +28,7 @@ function nextMove(square) {
 
 function switchTurn() {
 	if(checkWinner(turn)) {
-		setMessage("Congratulations " + turn +" , You win!!");
+		setMessage("Congrats " + turn +" , You win!!");
 		winner = turn;
 	}	else if(checkForTie()) {
 		setMessage("It is a tie");

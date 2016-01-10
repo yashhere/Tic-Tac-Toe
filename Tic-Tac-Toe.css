@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway|Allura|Roboto|Oxygen|Cabin:700|Rosario");
+@import url("https://fonts.googleapis.com/css?family=Raleway|Allura|Kranky|Roboto|Oxygen|Cabin:700|Rosario");
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -55,15 +55,13 @@ table {
 body {
 	background: #5C258D; /* fallback for old browsers */
 	background: url('hue.jpg') no-repeat;
-	-webkit-animation: linear 5s infinite;
-    -moz-animation: linear 5s infinite;
-    animation: linear 5s infinite;
-    -webkit-filter: hue-rotate(276deg) contrast(1.34294);
 }
 
 .icons {
 	margin-top: 20px;
 	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
 }
 
 .fa {
@@ -104,7 +102,7 @@ body {
 }
 
 .fa-github:hover {
-	color:#999;
+	color:black;
 }
 
 .fa-google-plus {
@@ -129,17 +127,19 @@ body {
 	height: 100px;
 	width: 100px;
 	text-align: center;
-	font-size: 40px;
+	font-size: 70px;
 	vertical-align: middle;
-	font-family: Arial;
+	font-family: Kranky;
+	-webkit-user-select: none;
+	-moz-user-select: none;
 }
 
 table {
 	margin-top: 10%;
 }
 
-tr td {
-	border: 10px solid white;
+table tr td {
+	border: 5px solid rgba(185, 200, 255, 0.13);
 }
 
 h1 {
@@ -147,7 +147,10 @@ h1 {
 	color: white;
 	font-size: 40px;
 	font-family: Raleway;
+	font-weight: bold;
 	padding-top: 10%;
+	-webkit-user-select: none;
+	-moz-user-select: none;
 }
 
 #message {
@@ -156,4 +159,6 @@ h1 {
 	width: auto;
 	color: white;
 	font-family: Oxygen;
+	-webkit-user-select: none;
+	-moz-user-select: none;
 }
